@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: red;
+  overflow: hidden;
+}
+.gameContainer {
+  background-image: url(background.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100vh;
+}
+.character {
+  background-image: url(character.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4rem;
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+}
+.obstacle {
+  background-image: url(pillar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4rem;
+  height: 5.5rem;
+  position: absolute;
+  bottom: 0.2rem;
+  left: 55vw;
+}
+.animate {
+  animation: charr 0.6s linear;
+}
+.obstacle_0 {
+  animation: obstacle_0 4s linear infinite;
+}
+.gameOver {
+  position: relative;
+  top: 63px;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+#scoreCount {
+  position: absolute;
+  color: brown;
+  top: 1rem;
+  right: 1rem;
+  border: 2px solid black;
+  width: 9rem;
+  padding: 0.8rem;
+}
+
+@keyframes charr {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 12rem;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes obstacle_0 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
+  }
+}
